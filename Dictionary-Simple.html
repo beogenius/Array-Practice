@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Dictionary</title>
+</head>
+<body>
+<h2>Simple Dictionary</h2>
+<input type="text" id="Text" value="">
+<input type="button" value="Translate" onclick="trans()">
+<p id="output"><br></p>
+</body>
+</html>
+<script>
+    let result=document.getElementById("output");
+
+    function trans(){
+        let en =["Hello","Bye"];
+        let vn =["Xinchao","Tam biet"];
+        let input =document.getElementById("Text").value;
+        for(let i=0;i<en.length;i++){
+            if(input == en[i]){
+                result=vn[i];
+                document.write(result).innerHTML;
+            }
+            else {
+                alert("no data");
+            }
+        }
+    }
+</script>
